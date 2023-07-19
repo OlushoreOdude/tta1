@@ -24,11 +24,11 @@ jobs:
           cache: "npm"
 
       - name: Install backend dependencies
-        working-directory: tta1/backend
+        working-directory: /home/ubuntu/actions-runner-backendserver/_work/tta1/tta1/backend
         run: npm ci
 
       - name: Create .env file in backend
-        working-directory: backend
+        working-directory: /home/ubuntu/actions-runner-backendserver/_work/tta1/tta1/backend
         run: |
           touch .env
           echo "${{ secrets.PROD_ENV_FILE }}" > .env
